@@ -130,6 +130,7 @@ add_library(component
   include/ftxui/component/screen_interactive.hpp
   include/ftxui/component/task.hpp
   include/ftxui/util/export.hpp
+  include/ftxui/component/terminal_input_parser.hpp
   src/ftxui/component/animation.cpp
   src/ftxui/component/button.cpp
   src/ftxui/component/catch_event.cpp
@@ -157,7 +158,6 @@ add_library(component
   src/ftxui/component/task_runner.cpp
   src/ftxui/component/task_runner.hpp
   src/ftxui/component/terminal_input_parser.cpp
-  src/ftxui/component/terminal_input_parser.hpp
   src/ftxui/component/util.cpp
   src/ftxui/component/window.cpp
 )
