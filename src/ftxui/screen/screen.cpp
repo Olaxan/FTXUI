@@ -414,16 +414,6 @@ Screen Screen::Create(Dimensions dimension) {
 }
 
 Screen::Screen(int dimx, int dimy) : Surface{dimx, dimy} {
-#if defined(_WIN32)
-  // The placement of this call is a bit weird, however we can assume that
-  // anybody who instantiates a Screen object eventually wants to output
-  // something to the console. If that is not the case, use an instance of
-  // Surface instead. As we require UTF8 for all input/output operations we will
-  // just switch to UTF8 encoding here
-  SetConsoleOutputCP(CP_UTF8);
-  SetConsoleCP(CP_UTF8);
-  WindowsEmulateVT100Terminal();
-#endif
 }
 
 /// Produce a std::string that can be used to print the Screen on the
